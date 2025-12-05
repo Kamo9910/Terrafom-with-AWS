@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Terraform</title>
+</head>
+<body>
+        <div class="centered-text">
+
+        <h1>Terraform with AWS</h1>
+        
+        <img class="myImage" src="./1_rojRn0kPfvk0fKnQElqbRQ.gif" alt="Terraform Project" style="transition: transform 0.3s ease;" height="50%" width="50%">
+        
+        <h2>Project Overview:</h2>
+        <p>Demonstrate end to end infrastructure as code (IaC) skills by provisioning, updating and destroying an Amazon EC2 instance using Terraform. This project showcases automation, scalability and disciplined resource management critical skills for cloud engineering and DevOps roles.</p>
+        <h3>Architecture Overview</h3>
+        <p>- Terraform: infrastructure as Code engine <br>
+           - AWS Provider: EC2 and AMI data source <br>
+           - AWS CLI: Credentials management and validation</p>
+         <h3>Steps taken to complets this project :</h3>
+            <h4>1. Initialize Project</h4>
+            <img class="myImage" src="Screenshot (1).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+            <img class="myImage" src="Screenshot (2).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+             <img class="myImage" src="Screenshot (3).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            
+            <p>- Configure AWS provider in fist_ec2.tf <br>
+               - Run terraform init to download provider and set up the workspace. </p>
+            <br>
+            <h4>2. Terraform plan</h4>
+            <img class="myImage" src="Screenshot (4).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <p>Generate detailed plan of actions: <br>
+               - Resources to create <br>
+               - Resources to upadte <br>
+               - Resources to destroy </p>
+            <p>Safe checks: You can review the plan before applying it, which prevents accidental deletions or costly mistakes. This is why Terraform is considered safe and predictable.</p>
+            <br>
+            <h4>3. Terraform apply</h4>
+            
+            <img class="myImage" src="Screenshot (5).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (6).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (7).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (8).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <p>- Reads configuration: Terraform loads your .tf files and variables. <br> 
+               - Compares state: It checks the current state of your infrastructure (from the terraform.tfstate file and the cloud provider). <br> 
+               - Generates a plan: If you haven’t provided a saved plan file, Terraform automatically runs a plan internally.  <br>
+               - Prompts for approval: By default, it shows you the plan and asks for confirmation before making changes.  <br>
+               - Executes changes: Once approved, Terraform communicates with the provider (AWS, Azure, GCP, etc.) to create, update, or destroy resources. <br>
+               - Updates state file: After applying, Terraform records the new state in terraform.tfstate so it knows what exists for future runs.</p>
+            <br>
+            <h4>4. Updating the EC2 instance</h4>
+            <img class="myImage" src="Screenshot (9).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <br>
+           <img class="myImage" src="Screenshot (10).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+         
+           <p>- Edit first_ec2.tf <br>
+              - Apply the terraform paln to see and whats being updated  </p>
+
+            <h4>5.Terraform apply</h4>
+           <img class="myImage" src="Screenshot (11).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+           <img class="myImage" src="Screenshot (12).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+           <img class="myImage" src="Screenshot (11).png" alt="APIGateway" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <p>- Tag name on my EC2 instance will be updated </p>
+
+            <h4>6. Delete the resources</h4>
+           <img class="myImage" src="Screenshot (16).png" alt="frontend" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (17).png" alt="frontend" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (18).png" alt="frontend" style="transition: transform 0.3s ease;" height="50%" width="50%">
+           <p>- To delete the EC2 instance runninng on AWS run the "terraform destroy" in the command Prompt <br>
+              - after the prompt has done runing you will be alerted on the command prompt <br>
+              - Go to AWS console and verify that your EC2 instance has been Terminated </p>
+            
+            </div>
+
+        <script src="javascript.js" charset="utf-8" ></script>
+
+</body>
+</html>
